@@ -10,6 +10,8 @@ import java.awt.FlowLayout;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Application1 {
 
@@ -82,9 +84,30 @@ public class Application1 {
 		mnNewMenu_2.add(mnNewMenu_3);
 		
 		mntmNewMenuItem_3 = new JMenuItem("Practice 1");
+		mntmNewMenuItem_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//Call JInternalFrame
+				
+				Practice1 p1 = new Practice1();
+				desktopPane.add(p1);
+				p1.show();
+			}
+		});
 		mnNewMenu_3.add(mntmNewMenuItem_3);
 		
 		mntmNewMenuItem_4 = new JMenuItem("Practice 2");
+		mntmNewMenuItem_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				//Call JInternalFrame
+				
+				Practice2 p2 = new Practice2();
+				desktopPane.add(p2);
+				p2.show();
+				
+			}
+		});
 		mnNewMenu_3.add(mntmNewMenuItem_4);
 		
 		mnNewMenu_1 = new JMenu("About Us");
